@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <title>LOONOOL · 图片审核空间 · 基础页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="base.css" />
   </head>
-  <!-- data-page 用来让 app.js 知道是哪个页面 -->
-  <body data-page="base">
+  <body>
     <div class="page-root">
-      <!-- 顶部导航栏（共用） -->
+      <!-- 顶部导航栏 -->
       <header class="navbar">
         <div class="navbar-inner">
           <div class="nav-left">
@@ -66,7 +65,7 @@
         </div>
       </header>
 
-      <!-- 基础页内容：简单主视觉 + 入口按钮 -->
+      <!-- 基础页内容：主视觉 -->
       <main class="home-page">
         <section class="home-hero">
           <div class="home-hero-main">
@@ -79,7 +78,10 @@
               上传图片 · 团队一起看 · AI 提供证据 · 一张图被确认可用。
             </p>
             <div class="home-actions">
-              <button class="btn-primary home-main-btn" onclick="goToMySpaces()">
+              <button
+                class="btn-primary home-main-btn"
+                onclick="goToMySpaces()"
+              >
                 进入我的空间
               </button>
               <button class="btn-outline" onclick="goToReviewDemo()">
@@ -103,6 +105,6 @@
       </main>
     </div>
 
-    <script src="app.js"></script>
+    <script src="base.js"></script>
   </body>
 </html>
