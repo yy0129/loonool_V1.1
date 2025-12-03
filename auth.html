@@ -1,13 +1,12 @@
-<!-- auth.html -->
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <title>登录 / 注册 · LOONOOL 图片审核空间</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="auth.css" />
   </head>
   <body>
-    <!-- 品牌条 -->
+    <!-- 顶部品牌条 -->
     <header class="app-header">
       <div class="app-logo-dot"></div>
       <div>
@@ -90,19 +89,12 @@
                 <!-- 预留错误提示位置：例如“邮箱或密码错误” -->
               </div>
 
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  margin-top: 8px;
-                "
-              >
+              <div class="form-actions">
                 <button class="btn btn-primary" type="button">
                   登录到 LOONOOL
                 </button>
                 <button
-                  class="btn-text"
+                  class="btn btn-text"
                   type="button"
                   data-switch-to="signup"
                 >
@@ -148,19 +140,12 @@
                 <!-- 预留错误提示位置：例如“密码长度不足” -->
               </div>
 
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  margin-top: 8px;
-                "
-              >
+              <div class="form-actions">
                 <button class="btn btn-primary" type="button">
                   创建 LOONOOL 账号
                 </button>
                 <button
-                  class="btn-text"
+                  class="btn btn-text"
                   type="button"
                   data-switch-to="login"
                 >
@@ -175,17 +160,17 @@
             <div class="side-note-tag">
               <span>🧩 登录 / 注册说明</span>
             </div>
-            <div style="line-height: 1.6; margin-bottom: 8px">
+            <div class="side-note-text">
               LOONOOL = 图片审核空间（Image Review Space）。在这里，你可以：
             </div>
-            <ul style="padding-left: 18px; margin: 0 0 8px; font-size: 12px">
+            <ul class="side-note-list">
               <li>为不同项目创建独立审核空间（Space）</li>
               <li>按任务（Task）管理候选图片，最多 6 张 / 任务</li>
               <li>和团队一起讨论，形成可回溯的证据链（Evidence）</li>
               <li>使用 AI 工具分析风险 / 风格 / 市场</li>
               <li>最终导出可用图片，并生成在线预览链接</li>
             </ul>
-            <div style="font-size: 11px; color: var(--text-soft)">
+            <div class="side-note-footer">
               当前页面仅为 UI 练习版，暂不接入真实登录逻辑。错误提示区域已预留，可以在接入
               API 时直接复用。
             </div>
@@ -194,6 +179,6 @@
       </section>
     </main>
 
-    <script src="main.js"></script>
+    <script src="auth.js"></script>
   </body>
 </html>
