@@ -1,0 +1,199 @@
+<!-- auth.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>登录 / 注册 · LOONOOL 图片审核空间</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 品牌条 -->
+    <header class="app-header">
+      <div class="app-logo-dot"></div>
+      <div>
+        <div class="app-title">LOONOOL · IMAGE REVIEW SPACE</div>
+        <div class="app-sub">登录你的图片审核空间，管理任务与证据链。</div>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <section class="card">
+        <!-- 头部 -->
+        <div class="card-header">
+          <div class="card-title-row">
+            <div>
+              <div class="card-title">登录 / 注册 LOONOOL</div>
+              <div class="card-desc">
+                使用邮箱创建你的图片审核空间，在同一个地方完成上传、讨论和证据管理。
+              </div>
+            </div>
+            <div class="card-tag">基础页 · Login / Sign Up</div>
+          </div>
+
+          <!-- 登录 / 注册 tab -->
+          <div class="auth-tabs" id="authTabs">
+            <button
+              class="auth-tab-btn active"
+              data-auth-mode="login"
+              type="button"
+            >
+              登录 Login
+            </button>
+            <button
+              class="auth-tab-btn"
+              data-auth-mode="signup"
+              type="button"
+            >
+              注册 Sign Up
+            </button>
+          </div>
+        </div>
+
+        <!-- 表单区域 -->
+        <div class="form-grid">
+          <!-- 左：表单本体 -->
+          <div>
+            <div class="form-section-title">账户信息 · Account</div>
+
+            <!-- 登录表单 -->
+            <form id="loginForm" novalidate>
+              <div class="form-field">
+                <div class="form-label-row">
+                  <label class="form-label" for="loginEmail">邮箱 Email</label>
+                  <div class="form-label-hint">推荐使用常用工作邮箱</div>
+                </div>
+                <input
+                  id="loginEmail"
+                  class="input"
+                  type="email"
+                  placeholder="you@company.com"
+                />
+              </div>
+
+              <div class="form-field">
+                <div class="form-label-row">
+                  <label class="form-label" for="loginPassword">
+                    密码 Password
+                  </label>
+                  <div class="form-label-hint">不少于 8 位，建议包含字母和数字</div>
+                </div>
+                <input
+                  id="loginPassword"
+                  class="input"
+                  type="password"
+                  placeholder="请输入你的密码"
+                />
+              </div>
+
+              <!-- 错误提示预留 -->
+              <div class="error-placeholder" id="loginError">
+                <!-- 预留错误提示位置：例如“邮箱或密码错误” -->
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 8px;
+                "
+              >
+                <button class="btn btn-primary" type="button">
+                  登录到 LOONOOL
+                </button>
+                <button
+                  class="btn-text"
+                  type="button"
+                  data-switch-to="signup"
+                >
+                  还没有账号？立即注册 →
+                </button>
+              </div>
+            </form>
+
+            <!-- 注册表单 -->
+            <form id="signupForm" style="display: none" novalidate>
+              <div class="form-field">
+                <div class="form-label-row">
+                  <label class="form-label" for="signupEmail">
+                    邮箱 Email
+                  </label>
+                  <div class="form-label-hint">用于接收通知与邀请</div>
+                </div>
+                <input
+                  id="signupEmail"
+                  class="input"
+                  type="email"
+                  placeholder="team@brand.com"
+                />
+              </div>
+
+              <div class="form-field">
+                <div class="form-label-row">
+                  <label class="form-label" for="signupPassword">
+                    密码 Password
+                  </label>
+                  <div class="form-label-hint">创建一个安全密码</div>
+                </div>
+                <input
+                  id="signupPassword"
+                  class="input"
+                  type="password"
+                  placeholder="设置登录密码"
+                />
+              </div>
+
+              <!-- 错误提示预留 -->
+              <div class="error-placeholder" id="signupError">
+                <!-- 预留错误提示位置：例如“密码长度不足” -->
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 8px;
+                "
+              >
+                <button class="btn btn-primary" type="button">
+                  创建 LOONOOL 账号
+                </button>
+                <button
+                  class="btn-text"
+                  type="button"
+                  data-switch-to="login"
+                >
+                  已有账号？直接登录 →
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 右：说明文案 -->
+          <aside class="side-note-card">
+            <div class="side-note-tag">
+              <span>🧩 登录 / 注册说明</span>
+            </div>
+            <div style="line-height: 1.6; margin-bottom: 8px">
+              LOONOOL = 图片审核空间（Image Review Space）。在这里，你可以：
+            </div>
+            <ul style="padding-left: 18px; margin: 0 0 8px; font-size: 12px">
+              <li>为不同项目创建独立审核空间（Space）</li>
+              <li>按任务（Task）管理候选图片，最多 6 张 / 任务</li>
+              <li>和团队一起讨论，形成可回溯的证据链（Evidence）</li>
+              <li>使用 AI 工具分析风险 / 风格 / 市场</li>
+              <li>最终导出可用图片，并生成在线预览链接</li>
+            </ul>
+            <div style="font-size: 11px; color: var(--text-soft)">
+              当前页面仅为 UI 练习版，暂不接入真实登录逻辑。错误提示区域已预留，可以在接入
+              API 时直接复用。
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
