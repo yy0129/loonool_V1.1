@@ -1,6 +1,6 @@
-// main.js
-
+// auth.js
 // 登录 / 注册 tab 切换逻辑（UI 练习版，不做表单校验）
+
 (function () {
   const tabs = document.querySelectorAll(".auth-tab-btn");
   const loginForm = document.getElementById("loginForm");
@@ -34,7 +34,7 @@
     });
   });
 
-  // 文本链接切换
+  // “还没有账号？立即注册 / 已有账号？直接登录” 文本按钮
   const switchButtons = document.querySelectorAll("[data-switch-to]");
   switchButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
