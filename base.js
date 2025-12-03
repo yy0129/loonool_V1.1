@@ -4,7 +4,6 @@ const currentUser = {
   initials: "JX",
 };
 
-// 初始化头像和用户名
 function initUserInfo() {
   const avatarEl = document.getElementById("user-avatar");
   const nameEl = document.getElementById("user-name");
@@ -12,7 +11,6 @@ function initUserInfo() {
   if (nameEl) nameEl.textContent = currentUser.name || "User";
 }
 
-// 绑定头像下拉菜单
 function initUserMenu() {
   const navUser = document.getElementById("nav-user");
   const trigger = document.getElementById("user-menu-trigger");
@@ -31,7 +29,7 @@ function initUserMenu() {
   });
 }
 
-// 导航相关
+// 导航行为
 function goToProfile() {
   alert("这里将来跳到 /profile（个人中心）。");
 }
@@ -48,9 +46,7 @@ function goToReviewDemo() {
   window.location.href = "review.html";
 }
 
-// 页面初始化
 document.addEventListener("DOMContentLoaded", () => {
   initUserInfo();
   initUserMenu();
-  console.log("基础页已初始化");
 });
